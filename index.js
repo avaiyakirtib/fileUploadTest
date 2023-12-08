@@ -8,7 +8,7 @@ server.post("/", upload.single("file"), async (req, res) => {
     const base64String = req.file.buffer.toString("base64");
     return res.status(200).json({
       success: true,
-      message: "MP3 upload successfully",
+      message: "File upload successfully",
       data: base64String,
     });
   } else {
